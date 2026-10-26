@@ -1,255 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
-    <!-- Meta tags -->
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- title -->
-    <title>Portfólio</title>
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/extends.css" />
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
-      rel="stylesheet"
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arthur Gaspare Camzano · Desenvolvedor full stack · Falkyria</title>
+    <meta
+      name="description"
+      content="Portfólio de Arthur Gaspare Camzano, desenvolvedor full stack e criador da Falkyria: Nicx, Ascend, AetherTable e Lumen."
     />
-
+    <meta property="og:title" content="Arthur Gaspare Camzano · Falkyria" />
+    <meta
+      property="og:description"
+      content="Desenvolvedor full stack. IA local, um RPG da vida real, uma mesa virtual de Magic e um portal de dados públicos."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#08090c" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <script>
+      // Applies the saved theme before first paint so there is no flash.
+      (function () {
+        var r = document.documentElement;
+        r.classList.add('js');
+        try {
+          if (localStorage.getItem('agc-theme') === 'light') r.classList.add('light');
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
-    <!-- navbar -->
-    <nav class="navbar">
-      <div class="navbar__content max-width mb-0">
-        <ul class="navbar__links">
-          <li><a href="#header">Início</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#skills">Habilidades</a></li>
-          <li><a href="#expe">Experiencia</a></li>
-          <li><a href="ptechs.html">Ptechs</a></li>
-          <li><a href="#footer">Contato</a></li>
-        </ul>
-        <div class="navbar__mobile">
-          <img src="assets/menu.svg" alt="menu" class="burguer" />
-          <ul class="mobile__links">
-            <li><a href="#header">Início</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#expe">Experiencia</a></li>
-            <li><a href="ptechs.html">Ptechs</a></li>
-            <li><a href="#footer">Contato</a></li>
-          </ul>
-        </div>
-
-        <div class="theme-toggle">
-          <input type="checkbox" class="checkbox" id="chk" />
-          <label class="label" for="chk">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-            <div class="ball"></div>
-          </label>
-        </div>
-
-      </div>
-    </nav>
-
-    <!-- header -->
-    <header id="header" class="max-width">
-      <div class="header__left">
-        <br>
-        <h1>Olá! Sou Arthur Gaspare Camzano estudante de desenvolvimento de sistemas.</h1>
-        <p>
-          Estudante dedicado ao desenvolvimento de sistemas. Minha paixão pela tecnologia e pela resolução de 
-          problemas me impulsiona a buscar constantemente novos conhecimentos e habilidades nessa área em constante evolução. 
-          Estou animado para compartilhar minha jornada de aprendizado e colaborar com outros entusiastas da tecnologia.
-        </p>
-        <a href="#about" class="btn btn-primary">Saiba Mais!</a>
-      </div>
-      <div class="header__right">
-        <div class="header__image">
-          <img src="assets/eu.jpg" alt="Arthur Gaspare Camzano" class="Gaspare"/>
-          <img src="assets/abstract.svg" alt="background" class="background" />
-        </div>
-      </div>
-    </header>
-
-    <!-- Sobre -->
-    <section id="about" class="about max-width">
-      <div class="about__left">
-        <h2 class="secondary-title">Além do código: quem sou eu?</h2>
-        <p>
-          Que tal se conectar comigo nas redes sociais abaixo e saber mais sobre
-          mim?
-        </p>
-        <ul>
-          <li>
-            <a href="https://www.linkedin.com/in/arthur-gaspare-camzano-60b513248/"><img src="assets/linkedin.svg" alt="Linkedin" /></a>
-          </li>
-          <li>
-            <a href="https://github.com/Dracon-46"><img src="assets/github.png" width="30px" alt="Github" /></a>
-          </li>
-        </ul>
-      </div>
-      <div class="about__right">
-        <h3 class="tertiary-title mb-m">
-          Desenvolvedor fullstack apaixonado por tecnologia e soluções criativas
-        </h3>
-        <p>
-          Olá, eu sou Arthur Gaspare, um estudante de desenvolvimento de sistemas e desenvolvedor fullstack apaixonado por tecnologia e soluções criativas. 
-          Estou em constante busca por conhecimento e experiência para aprimorar minhas habilidades nesse campo dinâmico. 
-          Com uma sólida base em desenvolvimento web e uma mente ávida por desafios, 
-          estou ansioso para explorar novas tecnologias e contribuir para projetos inovadores.
-        </p>
-        <p>
-          Eu amo o desafio de encontrar soluções inovadoras e criativas para
-          problemas complexos e estou sempre buscando aprender e crescer como
-          profissional.
-        </p>
-      </div>
-    </section>
-
-    <!-- habilidades -->
-    <section id="skills" class="skills">
-      <div class="skills__content max-width">
-        <h2 class="tertiary-title">Minha caixinha de ferramentas</h2>
-        <p class="description">
-          Descubra as habilidades e ferramentas que domino e que me permitem
-          criar soluções criativas e funcionais.
-        </p>
-        <ul>
-          <li class="skills__item">
-            <div class="image-container">
-              <img src="assets/notebook.png" alt="Desenvolvimento Web" />
-            </div>
-            <h3>Desenvolvimento Web</h3>
-            <p>
-              Experiência em desenvolvimento fullstack com foco em tecnologias
-              modernas.
-            </p>
-          </li>
-          <li class="skills__item">
-            <div class="image-container">
-              <img src="assets/colors.png" alt="Web Design" />
-            </div>
-            <h3>Web Design</h3>
-            <p>
-              Habilidade em criar layouts modernos e responsivos, com foco na
-              experiência do usuário.
-            </p>
-          </li>
-          <li class="skills__item">
-            <div class="image-container">
-              <img src="assets/phone.png" alt="UX/UI Design" />
-            </div>
-            <h3>Desenvolvimento Mobile</h3>
-            <p>
-              Conhecimentos em desenvolvimentos mobiles para criar aplicativos.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-   <!-- Experiência -->
-   <section id="expe" class="centro">
-    <h1 class="experiencia">Experiência</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container">
-          <h2 class="experience-sub-title">Frontend Development</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-              <div><h3>HTML</h3><p>Experiente</p></div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-              <div><h3>CSS</h3><p>Experiente</p></div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-              <div><h3>PHP</h3><p>Intermediário</p></div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-              <div><h3>JavaScript</h3><p>Intermediário</p></div>
-            </article>
-          </div>
-        </div>
-        <br>
-        <br>
-        <div class="details-container">
-          <h2 class="experience-sub-title">Backend Development</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-              <div><h3>MySQL</h3><p>Experiente</p></div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-              <div><h3>Python</h3><p>Básico</p></div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-              <div><h3>PHP</h3><p>Intermediário</p></div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-              <div><h3>Java</h3><p>Básico</p></div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <br>
-  <br>
-  <!-- P-techs -->
-  <div class="ptechs-container">
-    <section id="ptechsA" class="max-width">
-      <h2 class="secondary-title">P-techs</h2>
-      <p>
-        Projetos tecnológicos desenvolvidos e que representam o meu aprendizado e progresso. Acesse para ver mais.
+    <div id="root"></div>
+    <noscript>
+      <p style="padding: 2rem; font-family: sans-serif">
+        Arthur Gaspare Camzano: desenvolvedor full stack e criador da Falkyria.
+        Ative o JavaScript para ver o portfólio completo, ou acesse
+        <a href="https://github.com/Dracon-46">github.com/Dracon-46</a>.
       </p>
-      <ul>
-        <li><a href="ptechs.html">Ver P-techs</a></li>
-      </ul>
-    </section>
-  </div>
-  
-          
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="footer__content max-width mb-0">
-        <h2 class="tertiary-title mb-s">Vamos conversar?</h2>
-        <p class="mb-m">
-          Ficarei feliz em saber mais sobre seus projetos e como podemos
-          trabalhar juntos para torná-los realidade.
-        </p>
-        <div class="footer__contact mb-m">
-          <span class="mb-m">arthurgaspare@gmail.com</span>
-          <span>(15) 99151-3832</span>
-        </div>
-        <ul class="mb-l">
-          <li>
-            <a href="https://www.linkedin.com/in/arthur-gaspare-camzano-60b513248/"><img src="assets/linkedin.svg" alt="Linkedin" /></a>
-          </li>
-          <li>
-            <a href="https://github.com/Dracon-46"><img src="assets/github.png" alt="Github" width="30px"/></a>
-          </li>
-        </ul>
-        <p class="footer__copyright">
-          © 2024 Arthur Gaspare. Todos os direitos reservados.
-        </p>
-      </div>
-    </footer>
-    <!-- script -->
-    <script src="scripts/index.js"></script>
-    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
-
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
