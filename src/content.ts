@@ -101,7 +101,6 @@ export const products: Product[] = [
     status: 'Em produção',
     links: [
       { label: 'Site do Ascend', href: 'https://dracon-46.github.io/FalkyriaAscend/' },
-      { label: 'Código', href: 'https://github.com/Dracon-46/FalkyriaAscend' },
     ],
     accent: '#f5b733',
   },
