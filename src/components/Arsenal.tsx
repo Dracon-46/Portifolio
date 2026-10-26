@@ -17,7 +17,7 @@ export default function Arsenal() {
           label="Arsenal"
           id="arsenal-titulo"
           title="Ferramentas que eu uso de verdade"
-          lead="Tudo aqui aparece em algum projeto deste portfólio, não numa lista de cursos."
+          lead="As linguagens e ferramentas com que eu trabalho no dia a dia."
         />
       </div>
 

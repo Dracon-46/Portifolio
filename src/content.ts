@@ -28,8 +28,8 @@ export const about = {
   manifesto:
     'Sou desenvolvedor full stack e gosto de problemas que pedem o sistema inteiro: a regra de negócio, o banco, a interface, o deploy e a documentação que explica por que cada decisão foi tomada.',
   paragraphs: [
-    'Já passei por web, mobile, IoT e dados: de um simulador de impacto de asteroides com dados da NASA a uma central de alarme com ESP32 e um módulo de conciliação bancária para um ERP de verdade. Aprendo do jeito que mais funciona para mim: construindo.',
-    'Hoje divido o tempo entre a FATEC, projetos com empresas parceiras e a Falkyria, onde transformo ideias em produtos completos. Sou apaixonado por inteligência artificial, por jogos e por software que respeita quem usa.',
+    'Já passei por web, mobile, IoT e dados: de um simulador de impacto de asteroides com dados da NASA a jogos clássicos refeitos em várias linguagens. Aprendo do jeito que mais funciona para mim: construindo.',
+    'Hoje divido o tempo entre a FATEC e a Falkyria, onde transformo ideias em produtos completos. Sou apaixonado por inteligência artificial, por jogos e por software que respeita quem usa.',
   ],
   facts: [
     { label: 'Foco', value: 'Full stack, do banco ao pixel' },
@@ -152,45 +152,6 @@ export const projects = [
       'Rastreamento de asteroides próximos da Terra e simulação de impacto: energia em megatons, zonas de destruição, estimativa de vítimas com dados populacionais e opções de mitigação.',
     tags: ['JavaScript', 'NASA NeoWs', 'WorldPop', 'OpenStreetMap'],
     href: 'https://github.com/Dracon-46/MedJed_MeteorMadness',
-  },
-  {
-    name: 'Central de alarme IoT',
-    year: '2026',
-    description:
-      'Segurança residencial com ESP32: presença, porta, gás, fumaça e incêndio, senha no teclado, sirene, eventos por MQTT e dashboard no Node-RED.',
-    tags: ['ESP32', 'C++', 'PlatformIO', 'MQTT', 'Node-RED'],
-    href: 'https://github.com/Dracon-46/esp32-sistema-seguranca',
-  },
-  {
-    name: 'Conciliação bancária',
-    year: '2026',
-    description:
-      'Projeto integrador com a Agiw Sistemas: confronta o ERP com o extrato do banco para conciliar, estornar, lançar e fechar períodos, com relatórios em XLSX, CSV, PDF e OFX.',
-    tags: ['Next.js', 'Prisma', 'SQL Server', 'ExcelJS'],
-    href: 'https://github.com/Dracon-46/PI_Agiw_Fatec',
-  },
-  {
-    name: 'Presença por RA',
-    year: '2026',
-    description:
-      'O aluno digita o RA num ESP32 com teclado; o Node-RED valida, grava no MySQL e atualiza um dashboard com indicadores do dia.',
-    tags: ['ESP32', 'Node-RED', 'MySQL'],
-    href: 'https://github.com/Dracon-46/ProgMult',
-  },
-  {
-    name: 'Fábrica de Software',
-    year: '2025',
-    description: 'Aplicativo multiplataforma em Flutter com login pelo Google via Firebase e um back-end em Express.',
-    tags: ['Flutter', 'Dart', 'Firebase', 'Express'],
-    href: 'https://github.com/Dracon-46/FabricaDeSoftware',
-  },
-  {
-    name: 'DevOps na prática',
-    year: '2026',
-    description:
-      'Pipelines de CI/CD com GitHub Actions e testes unitários, de integração e de performance, com um projeto prático a cada aula.',
-    tags: ['GitHub Actions', 'CI/CD', 'Testes'],
-    href: 'https://github.com/Dracon-46/DevOps',
   },
   {
     name: 'Games',

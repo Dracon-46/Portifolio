@@ -16,7 +16,7 @@ export default function Projects() {
           label="Projetos"
           id="projetos-titulo"
           title="Outros projetos"
-          lead="Hardware, dados, mobile e sistemas para empresas. Cada um resolveu um problema real, e o código está aberto."
+          lead="Fora da Falkyria: experimentos com dados da NASA e jogos clássicos, com o código aberto."
         />
 
         <ol className="border-b border-line">
