@@ -119,7 +119,7 @@ export const products: Product[] = [
     ],
     stack: ['Next.js', 'Konva', 'NestJS', 'Prisma', 'PostgreSQL', 'Colyseus', 'Turborepo'],
     status: 'Em desenvolvimento',
-    links: [{ label: 'Código', href: 'https://github.com/Dracon-46/AetherTable' }],
+    links: [{ label: 'Jogar no AetherTable', href: 'https://aether-table-frontend.vercel.app/' }],
     accent: '#b79cff',
   },
   {
