@@ -100,7 +100,7 @@ export const products: Product[] = [
     stack: ['React 19', 'TypeScript', 'Fastify 5', 'Drizzle', 'PostgreSQL 16', 'Capacitor', 'Playwright'],
     status: 'Em produção',
     links: [
-      { label: 'Site do Ascend', href: 'https://dracon-46.github.io/FalkyriaAscend/' },
+      { label: 'Site do Ascend', href: 'https://dracon-46.github.io/ascend/' },
     ],
     accent: '#f5b733',
   },
