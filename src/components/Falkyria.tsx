@@ -1,5 +1,7 @@
 import { ArrowUpRight } from 'lucide-react';
 import { useEffect, useRef, useState, type MouseEvent } from 'react';
+import logoDark from '../assets/falkyria/falkyria-branca.svg';
+import logoLight from '../assets/falkyria/falkyria.svg';
 import { falkyria, products, type Product } from '../content';
 import { useReveal } from '../hooks/useReveal';
 import { useSceneSection } from '../hooks/useSceneSection';
@@ -126,6 +128,9 @@ export default function Falkyria() {
         </div>
 
         <h2 id="falkyria-titulo" className="display flex items-end text-[clamp(4.5rem,17vw,16rem)]">
+          {/* The eagle mark: white on the dark stage, ink on the light one. */}
+          <img src={logoDark} alt="" aria-hidden="true" className="mr-[0.1em] mb-[0.12em] h-[0.78em] w-auto shrink-0 light:hidden" />
+          <img src={logoLight} alt="" aria-hidden="true" className="mr-[0.1em] mb-[0.12em] hidden h-[0.78em] w-auto shrink-0 light:block" />
           <span data-split>Falkyria</span>
           <span className="mb-[0.16em] ml-[0.06em] inline-block size-[0.11em] shrink-0 rounded-full bg-amber" aria-hidden="true" />
         </h2>
