@@ -4,7 +4,7 @@
  * no React render is involved in either direction.
  */
 export type SceneTarget = {
-  /** Formation index: 0 core, 1 Nicx, 2 Ascend, 3 AetherTable, 4 Lumen, 5 cosmos. */
+  /** Formation index: 0 core, 1 Nicx, 2 Ascend, 3 AetherTable, 4 Lumen, 5 Games, 6 cosmos. */
   formation: number;
   /** Overall particle opacity, 0..1. */
   alpha: number;

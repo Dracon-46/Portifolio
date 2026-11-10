@@ -16,7 +16,7 @@ export default function Projects() {
           label="Projetos"
           id="projetos-titulo"
           title="Outros projetos"
-          lead="Fora da Falkyria: experimentos com dados da NASA e jogos clássicos, com o código aberto."
+          lead="Fora da Falkyria: experimentos e estudos, com o código aberto."
         />
 
         <ol className="border-b border-line">
@@ -55,7 +55,7 @@ export default function Projects() {
                     <ArrowUpRight className="size-4 transition-transform duration-500 ease-out-expo group-hover:rotate-45" />
                   </span>
                 </span>
-                <span className="sr-only">(código no GitHub, abre em nova aba)</span>
+                <span className="sr-only">(abre em nova aba)</span>
               </a>
             </li>
           ))}

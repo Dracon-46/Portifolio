@@ -1,6 +1,6 @@
 /**
  * One draw call for the whole field. Each particle carries its position in
- * all six formations; uProgress (0..5) picks the pair to blend, with a
+ * all seven formations; uProgress (0..6) picks the pair to blend, with a
  * per-particle delay so shapes dissolve and re-form instead of sliding.
  */
 
@@ -63,14 +63,15 @@ uniform float uPixelRatio;
 uniform float uAlpha;
 uniform vec2 uMouse;
 uniform float uMouseStrength;
-uniform vec3 uColors[6];
-uniform float uNoise[6];
+uniform vec3 uColors[7];
+uniform float uNoise[7];
 
 attribute vec3 aF1;
 attribute vec3 aF2;
 attribute vec3 aF3;
 attribute vec3 aF4;
 attribute vec3 aF5;
+attribute vec3 aF6;
 attribute float aRandom;
 attribute float aSize;
 
@@ -83,22 +84,22 @@ float w(float index, float k) { return 1.0 - step(0.5, abs(index - k)); }
 
 vec3 shape(float k) {
   return position * w(0.0, k) + aF1 * w(1.0, k) + aF2 * w(2.0, k)
-       + aF3 * w(3.0, k) + aF4 * w(4.0, k) + aF5 * w(5.0, k);
+       + aF3 * w(3.0, k) + aF4 * w(4.0, k) + aF5 * w(5.0, k) + aF6 * w(6.0, k);
 }
 
 vec3 tint(float k) {
   return uColors[0] * w(0.0, k) + uColors[1] * w(1.0, k) + uColors[2] * w(2.0, k)
-       + uColors[3] * w(3.0, k) + uColors[4] * w(4.0, k) + uColors[5] * w(5.0, k);
+       + uColors[3] * w(3.0, k) + uColors[4] * w(4.0, k) + uColors[5] * w(5.0, k) + uColors[6] * w(6.0, k);
 }
 
 float flow(float k) {
   return uNoise[0] * w(0.0, k) + uNoise[1] * w(1.0, k) + uNoise[2] * w(2.0, k)
-       + uNoise[3] * w(3.0, k) + uNoise[4] * w(4.0, k) + uNoise[5] * w(5.0, k);
+       + uNoise[3] * w(3.0, k) + uNoise[4] * w(4.0, k) + uNoise[5] * w(5.0, k) + uNoise[6] * w(6.0, k);
 }
 
 void main() {
   float i0 = floor(uProgress);
-  float i1 = min(i0 + 1.0, 5.0);
+  float i1 = min(i0 + 1.0, 6.0);
   float f = uProgress - i0;
   // Staggered morph: each particle leaves at its own moment.
   float t = smoothstep(0.0, 1.0, clamp((f - aRandom * 0.4) / 0.6, 0.0, 1.0));

@@ -28,7 +28,7 @@ export const about = {
   manifesto:
     'Sou desenvolvedor full stack e gosto de problemas que pedem o sistema inteiro: a regra de negócio, o banco, a interface, o deploy e a documentação que explica por que cada decisão foi tomada.',
   paragraphs: [
-    'Já passei por web, mobile, IoT e dados: de um simulador de impacto de asteroides com dados da NASA a jogos clássicos refeitos em várias linguagens. Aprendo do jeito que mais funciona para mim: construindo.',
+    'Já passei por web, mobile, IoT e dados: de um simulador de impacto de asteroides com dados da NASA a um fliperama de jogos e shaders que roda inteiro no navegador. Aprendo do jeito que mais funciona para mim: construindo.',
     'Hoje divido o tempo entre a FATEC e a Falkyria, onde transformo ideias em produtos completos. Sou apaixonado por inteligência artificial, por jogos e por software que respeita quem usa.',
   ],
   facts: [
@@ -141,6 +141,26 @@ export const products: Product[] = [
     ],
     accent: '#7ee0a1',
   },
+  {
+    id: 'games',
+    name: 'Games',
+    kicker: 'Jogos',
+    tagline: 'Um fliperama inteiro no navegador.',
+    description:
+      'Vinte e um jogos que abrem num clique, sem instalar nada e sem nenhuma dependência: dos clássicos de tabuleiro com IA a experimentos em WebGL com dezenas de milhares de partículas.',
+    highlights: [
+      { title: 'Xadrez completo', text: 'Motor próprio validado por perft, IA em Web Worker, Chess960, Rei da Colina, Três Xeques e relógio.' },
+      { title: 'Shaders próprios', text: 'Enxame, Núcleo e Túnel rodam na GPU com GLSL escrito à mão, sem engine.' },
+      { title: 'Zero dependências', text: 'HTML, CSS e JavaScript puros; funciona no celular e no computador.' },
+    ],
+    stack: ['JavaScript', 'WebGL', 'GLSL', 'Canvas', 'Web Workers', 'Vercel'],
+    status: 'No ar',
+    links: [
+      { label: 'Jogar agora', href: 'https://jogos-navegador.vercel.app' },
+      { label: 'Código', href: 'https://github.com/Dracon-46/Games' },
+    ],
+    accent: '#ff7a8f',
+  },
 ];
 
 export const projects = [
@@ -151,13 +171,6 @@ export const projects = [
       'Rastreamento de asteroides próximos da Terra e simulação de impacto: energia em megatons, zonas de destruição, estimativa de vítimas com dados populacionais e opções de mitigação.',
     tags: ['JavaScript', 'NASA NeoWs', 'WorldPop', 'OpenStreetMap'],
     href: 'https://github.com/Dracon-46/MedJed_MeteorMadness',
-  },
-  {
-    name: 'Games',
-    year: '2025',
-    description: 'Snake e Tetris recriados em Java, Python e JavaScript para treinar lógica e explorar linguagens.',
-    tags: ['Java', 'Python', 'Pygame', 'JavaScript'],
-    href: 'https://github.com/Dracon-46/Games',
   },
 ];
 

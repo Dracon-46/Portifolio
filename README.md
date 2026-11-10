@@ -1,10 +1,10 @@
 # Portfólio · Arthur Gaspare Camzano
 
-Portfólio pessoal e vitrine da **Falkyria**: Nicx, Ascend, AetherTable e Lumen.
+Portfólio pessoal e vitrine da **Falkyria**: Nicx, Ascend, AetherTable, Lumen e Games.
 
 Uma única cena WebGL acompanha a leitura: 15 mil partículas (7 mil no celular), num só
 draw call, se transformam no núcleo da abertura, no slime do Nicx, na escada do Ascend,
-nas cartas do AetherTable, nas colunas de dados do Lumen e, no fim, num campo de estrelas.
+nas cartas do AetherTable, nas colunas de dados do Lumen, no controle do Games e, no fim, num campo de estrelas.
 
 ## Stack
 

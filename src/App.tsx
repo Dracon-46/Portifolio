@@ -14,7 +14,7 @@ import { startSmoothScroll } from './lib/motion';
 export default function App() {
   const tail = useRef<HTMLDivElement>(null);
   // Everything after Falkyria sits in front of a dim starfield.
-  useSceneSection(tail, { formation: 5, alpha: 0.5, offset: 0 });
+  useSceneSection(tail, { formation: 6, alpha: 0.5, offset: 0 });
 
   useEffect(() => startSmoothScroll(), []);
 

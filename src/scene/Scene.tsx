@@ -5,11 +5,11 @@ import { onSceneTargetChange, sceneTarget } from '../lib/sceneStore';
 import { buildAttributes, buildFormations } from './formations';
 import { fragmentShader, vertexShader } from './shaders';
 
-// Core, Nicx, Ascend, AetherTable, Lumen, cosmos. Same hues as the chapters.
-const DARK_COLORS = ['#9cc4f5', '#46e3f5', '#f5b733', '#b79cff', '#7ee0a1', '#c9d3e6'];
-const LIGHT_COLORS = ['#1c5cab', '#0b7f95', '#a86f00', '#5b3fc4', '#1f7a45', '#3d4a63'];
+// Core, Nicx, Ascend, AetherTable, Lumen, Games, cosmos. Same hues as the chapters.
+const DARK_COLORS = ['#9cc4f5', '#46e3f5', '#f5b733', '#b79cff', '#7ee0a1', '#ff7a8f', '#c9d3e6'];
+const LIGHT_COLORS = ['#1c5cab', '#0b7f95', '#a86f00', '#5b3fc4', '#1f7a45', '#b3263c', '#3d4a63'];
 // Idle drift per formation: the core breathes, the cards stay crisp.
-const NOISE = [0.11, 0.05, 0.04, 0.015, 0.02, 0.18];
+const NOISE = [0.11, 0.05, 0.04, 0.015, 0.02, 0.025, 0.18];
 const MAX_DPR = 1.75;
 
 /**
@@ -50,7 +50,7 @@ function Particles({ light, reducedMotion }: Props) {
   const mouseTarget = useRef(new THREE.Vector2());
 
   const geometry = useMemo(() => {
-    const [f0, f1, f2, f3, f4, f5] = buildFormations(count);
+    const [f0, f1, f2, f3, f4, f5, f6] = buildFormations(count);
     const { random, size: sizes } = buildAttributes(count);
     const g = new THREE.BufferGeometry();
     g.setAttribute('position', new THREE.BufferAttribute(f0, 3));
@@ -59,6 +59,7 @@ function Particles({ light, reducedMotion }: Props) {
     g.setAttribute('aF3', new THREE.BufferAttribute(f3, 3));
     g.setAttribute('aF4', new THREE.BufferAttribute(f4, 3));
     g.setAttribute('aF5', new THREE.BufferAttribute(f5, 3));
+    g.setAttribute('aF6', new THREE.BufferAttribute(f6, 3));
     g.setAttribute('aRandom', new THREE.BufferAttribute(random, 1));
     g.setAttribute('aSize', new THREE.BufferAttribute(sizes, 1));
     // Morphing moves particles far outside any single shape's bounds.

@@ -4,7 +4,7 @@
  * i of the next. Units: the camera sees roughly 6.3 units of height at z = 0.
  */
 
-export const FORMATION_COUNT = 6;
+export const FORMATION_COUNT = 7;
 
 /** Deterministic PRNG (mulberry32): the same field on every load. */
 function rng(seed: number) {
@@ -153,7 +153,41 @@ function columns(n: number, r: () => number, set: Writer) {
   }
 }
 
-/** 5 — Cosmos: a wide, shallow starfield behind the rest of the page. */
+/** 5 — Games: a gamepad seen from the front, with a d-pad and four buttons. */
+function gamepad(n: number, r: () => number, set: Writer) {
+  for (let i = 0; i < n; i++) {
+    const k = r();
+    if (k < 0.15) {
+      // D-pad: a cross on the left.
+      const horizontal = r() < 0.5;
+      const a = (r() - 0.5) * 0.78;
+      const b = (r() - 0.5) * 0.24;
+      set(i, -1.05 + (horizontal ? a : b), 0.2 + (horizontal ? b : a), 0.14);
+    } else if (k < 0.33) {
+      // Four round buttons in a diamond on the right.
+      const angle = (Math.floor(r() * 4) * Math.PI) / 2;
+      const a = r() * Math.PI * 2;
+      const d = Math.sqrt(r()) * 0.125;
+      set(i, 1.05 + Math.cos(angle) * 0.31 + Math.cos(a) * d, 0.2 + Math.sin(angle) * 0.31 + Math.sin(a) * d, 0.14);
+    } else if (k < 0.38) {
+      // Two small centre buttons.
+      const side = r() < 0.5 ? -1 : 1;
+      set(i, side * 0.2 + (r() - 0.5) * 0.16, 0.42 + (r() - 0.5) * 0.06, 0.14);
+    } else {
+      // Body: a rounded slab whose lower edge swells into two grips.
+      const x = (r() * 2 - 1) * 1.95;
+      const ax = Math.abs(x);
+      const edge = Math.sqrt(Math.max(0, 1 - Math.pow(ax / 1.95, 6)));
+      const grip = Math.exp(-Math.pow((ax - 1.35) / 0.42, 2));
+      const top = 0.1 + (0.78 - 0.1 * (ax / 1.95)) * edge;
+      const bottom = 0.1 - (0.42 + 0.95 * grip) * edge;
+      const y = r() < 0.6 ? (r() < 0.5 ? top : bottom) + (r() - 0.5) * 0.03 : bottom + r() * (top - bottom);
+      set(i, x, y, (r() - 0.5) * 0.22);
+    }
+  }
+}
+
+/** 6 — Cosmos: a wide, shallow starfield behind the rest of the page. */
 function cosmos(n: number, r: () => number, set: Writer) {
   for (let i = 0; i < n; i++) {
     set(i, (r() - 0.5) * 20, (r() - 0.5) * 11, -7 + r() * 9);
@@ -161,7 +195,7 @@ function cosmos(n: number, r: () => number, set: Writer) {
 }
 
 export function buildFormations(count: number): Float32Array[] {
-  const builders = [core, slime, stairs, cards, columns, cosmos];
+  const builders = [core, slime, stairs, cards, columns, gamepad, cosmos];
   return builders.map((build, index) => {
     const out = new Float32Array(count * 3);
     build(count, rng(1337 + index * 101), writer(out));
