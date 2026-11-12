@@ -147,11 +147,11 @@ export const products: Product[] = [
     kicker: 'Jogos',
     tagline: 'Um fliperama inteiro no navegador.',
     description:
-      'Vinte e um jogos que abrem num clique, sem instalar nada e sem nenhuma dependência: dos clássicos de tabuleiro com IA a experimentos em WebGL com dezenas de milhares de partículas.',
+      'Trinta jogos que abrem num clique, sem instalar nada e sem nenhuma dependência: dos clássicos de tabuleiro com IA a experimentos em WebGL com dezenas de milhares de partículas.',
     highlights: [
       { title: 'Xadrez completo', text: 'Motor próprio validado por perft, IA em Web Worker, Chess960, Rei da Colina, Três Xeques e relógio.' },
       { title: 'Shaders próprios', text: 'Enxame, Núcleo e Túnel rodam na GPU com GLSL escrito à mão, sem engine.' },
-      { title: 'Zero dependências', text: 'HTML, CSS e JavaScript puros; funciona no celular e no computador.' },
+      { title: 'Online', text: 'Contas, ranking global e xadrez contra outras pessoas, sobre Supabase.' },
     ],
     stack: ['JavaScript', 'WebGL', 'GLSL', 'Canvas', 'Web Workers', 'Vercel'],
     status: 'No ar',
